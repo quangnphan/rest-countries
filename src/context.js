@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useCallback } from "react";
 
-const url = "https://restcountries.eu/rest/v2/name/";
+const url = "https://restcountries.com/v2/name/";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -27,7 +27,7 @@ const AppProvider = ({ children }) => {
   const fetchFilter = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://restcountries.eu/rest/v2/region/${region}`);
+      const response = await fetch(`https://restcountries.com/v2/region/${region}`);
       const data = await response.json();
       setCountries(data);
       setLoading(false);
