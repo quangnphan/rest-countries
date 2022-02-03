@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
 
-const url = 'https://restcountries.eu/rest/v2/alpha/';
+const url = 'https://restcountries.com/v2/alpha/';
 
 export default function SingleCountry() {
   const { code } = useParams();
