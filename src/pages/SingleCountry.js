@@ -64,14 +64,14 @@ export default function SingleCountry() {
               </p>
               <p>
                 <span>Currencies:</span>
-                {country.currencies.map((currency) => {
-                  return <> {currency.name}</>;
+                {country.currencies.map((currency,index) => {
+                  return <span key={index}> {currency.name}</span>;
                 })}
               </p>
               <p>
                 <span>Languages:</span>
-                {country.languages.map((language) => {
-                  return <> {language.name}</>;
+                {country.languages.map((language,index) => {
+                  return <span key={index}> {language.name}</span>;
                 })}
               </p>
             </div>
